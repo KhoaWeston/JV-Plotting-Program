@@ -1,15 +1,18 @@
 # JV-Plotting Program
- This program plots the raw data from the University of Toledo's PV Measurements, Inc.'s solar simulator for solar cell characterization. Given the current density and voltage readings, the program will plot each curve and display the sample's power conversion efficiency (PCE), fill factor (FF), short circuit current density (Jsc), and open circuit voltage (Voc). 
+ This program plots the raw data from the University of Toledo's PV Measurements, Inc.'s EQE measurement device for tandem solar cell characterization. Given the wavelength and quantum efficiency (QE) of each subcell, the program will plot each curve and display the sample's Jsc in AM1.5G and AM0, Jsc mismatch, and band gap (Eg). 
 
- ![](/JV_TD_batch3_11_3.png)
+ ![](/QE Example Plots.png)
 
 
 ## How to Build
 1. Clone the repository
 2. Open the project folder using your personal Python IDE
-3. Run the following command in the terminal:
+3. Run the following commands in the terminal:
 ```
 pip install matplotlib
+```
+```
+pip install numpy
 ```
 
 ## How to Use
@@ -19,7 +22,9 @@ pip install matplotlib
 
 ## Result
 - A new folder will be created within the specified directory named 'Plots'
-- Each file in the directory will have a JV plot within the new folder
-- Displayed will be the sample's PCE, FF, Jsc, and Voc
+- Within the new folder, you will get a couple of plots:
+  * QE curve for each file
+  * Plot of both subcell's QE curves
+- Displayed will be the sample's Jsc in both AM1.5G and AM0, Jsc mismatch in both spectra, and subcell band gap. 
 
 ## References
